@@ -48,7 +48,7 @@ class App extends Component {
       this.setState({loading: true})
     }
 
-    let fetchURL = 'http://localhost:3001/https://oregonnikkei.pastperfectonline.com/randomimages';
+    let fetchURL = 'https://boiling-harbor-07938.herokuapp.com/oregonnikkei.pastperfectonline.com/randomimages';
 
     const urls = [];
 
@@ -101,7 +101,7 @@ class App extends Component {
             const start = ind;
             const end = urlIndsEnd[index];
 
-            const urlPrefix = 'https://oregonnikkei.pastperfectonline.com/';
+            const urlPrefix = 'oregonnikkei.pastperfectonline.com/';
 
             urls.push( urlPrefix + text.slice(start, end));
           })
@@ -129,7 +129,7 @@ class App extends Component {
 
   getRandomObject = async (url) => {
 
-    let fetchURL = `http://localhost:3001/` + url;
+    let fetchURL = `https://boiling-harbor-07938.herokuapp.com/` + url;
       
     const response = await fetch(fetchURL)
     const reader = response.body.getReader();
@@ -183,7 +183,7 @@ class App extends Component {
 
     let randX = Math.ceil(Math.random() * width) - 100;
 
-    let randInt = Math.ceil(Math.random() * 20) + 25;
+    let randInt = Math.ceil(Math.random() * 20) + 35;
     let num = Math.ceil(Math.random() * 500) + 100;
 
     let blurClass = () => {
