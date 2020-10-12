@@ -48,7 +48,7 @@ class App extends Component {
       this.setState({loading: true})
     }
 
-    let fetchURL = 'https://boiling-harbor-07938.herokuapp.com/oregonnikkei.pastperfectonline.com/randomimages';
+    let fetchURL = 'https://boiling-harbor-07938.herokuapp.com/https://oregonnikkei.pastperfectonline.com/randomimages';
 
     const urls = [];
 
@@ -101,7 +101,7 @@ class App extends Component {
             const start = ind;
             const end = urlIndsEnd[index];
 
-            const urlPrefix = 'oregonnikkei.pastperfectonline.com/';
+            const urlPrefix = 'https://oregonnikkei.pastperfectonline.com/';
 
             urls.push( urlPrefix + text.slice(start, end));
           })
@@ -262,7 +262,7 @@ class App extends Component {
   render() {
     return (
       <div className="pics-container">
-        <img alt="JAMO logo" src="http://www.oregonnikkei.org/images/JAMOnotag.jpg" className="logo-img" />
+        <img alt="JAMO logo" src="https://www.oregonnikkei.org/images/JAMOnotag.jpg" className="logo-img" />
             <Pictures 
               objects={this.state.objects}
               clicked={this.clickHandler}
